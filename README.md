@@ -3,14 +3,14 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 <div>
-    <a href="https://github.com/coderabbitai/ai-pr-reviewer)/commits/main">
-    <img alt="GitHub" src="https://img.shields.io/github/last-commit/coderabbitai/ai-pr-reviewer/main?style=for-the-badge" height="20">
+    <a href="https://github.com/dcnoye/pr-reviewer)/commits/master">
+    <img alt="GitHub" src="https://img.shields.io/github/last-commit/dcnoye/pr-reviewer/main?style=for-the-badge" height="20">
     </a>
     </div>
 
 ## Overview
 
-CodeRabbit `ai-pr-reviewer` is an open-source project built on AI, designed to
+DC `pr-reviewer` is an open-source project built on AI, designed to
 enhance developer productivity and efficiency by performing automated reviews of
 pull requests. Features:
 
@@ -47,7 +47,6 @@ FAQs, you can refer to the sections below.
 
 - [Overview](#overview)
 - [Install instructions](#install-instructions)
-- [Conversation with CodeRabbit](#conversation-with-coderabbit)
 - [Examples](#examples)
 - [Contribute](#contribute)
 - [FAQs](#faqs)
@@ -80,7 +79,7 @@ jobs:
   review:
     runs-on: ubuntu-latest
     steps:
-      - uses: coderabbitai/ai-pr-reviewer@latest
+      - uses: dcnoye/pr-reviewer@dev
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
@@ -123,13 +122,13 @@ value. For example, to review docs/blog posts, you can use the following prompt:
 
 ```yaml
 system_message: |
-  You are `@coderabbitai` (aka `github-actions[bot]`), a language model
+  You are `@dcnoye` (aka `github-actions[bot]`), a language model
   trained by OpenAI. Your purpose is to act as a highly experienced
   DevRel (developer relations) professional with focus on cloud-native
   infrastructure.
 
   Company context -
-  CodeRabbit is an AI-powered Code reviewer.It boosts code quality and cuts manual effort. Offers context-aware, line-by-line feedback, highlights critical changes,
+  DC is an AI-powered Code reviewer.It boosts code quality and cuts manual effort. Offers context-aware, line-by-line feedback, highlights critical changes,
   enables bot interaction, and lets you commit suggestions directly from GitHub.
 
   When reviewing or generating content focus on key areas such as -
@@ -150,15 +149,15 @@ system_message: |
 
 </details>
 
-## Conversation with CodeRabbit
+## Conversation with DC
 
 You can reply to a review comment made by this action and get a response based
 on the diff context. Additionally, you can invite the bot to a conversation by
-tagging it in the comment (`@coderabbitai`).
+tagging it in the comment (`@dcnoye`).
 
 Example:
 
-> @coderabbitai Please generate a test plan for this file.
+> @dcnoye Please generate a test plan for this file.
 
 Note: A review comment is a comment made on a diff or a file in the pull
 request.
@@ -170,7 +169,7 @@ to review documentation, you can ignore PRs that only change the documentation.
 To ignore a PR, add the following keyword in the PR description:
 
 ```text
-@coderabbitai: ignore
+@dcnoye: ignore
 ```
 
 ## Examples
@@ -240,7 +239,7 @@ jobs:
   review:
     runs-on: ubuntu-latest
     steps:
-      - uses: coderabbitai/ai-pr-reviewer@latest
+      - uses: dcnoye/pr-reviewer@dev
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
