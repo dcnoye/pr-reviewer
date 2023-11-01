@@ -3,7 +3,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 <div>
-    <a href="https://github.com/dcnoye/pr-reviewer)/commits/master">
+    <a href="https://github.com/dcnoye/pr-reviewer/commits/master">
     <img alt="GitHub" src="https://img.shields.io/github/last-commit/dcnoye/pr-reviewer/main?style=for-the-badge" height="20">
     </a>
     </div>
